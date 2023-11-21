@@ -15,7 +15,6 @@ contract NFTMarketplace is ERC721URIStorage {
         address payable contractAddress;
         address payable owner;
         uint256 price;
-        bool isListed;
     }
 
     mapping(uint256 => NFT) private _idToNFT;
