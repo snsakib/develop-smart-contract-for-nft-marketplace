@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/snsakib/develop-smart-contract-for-nft-marketplace#readme",
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "3.0.0",
-    "@openzeppelin/contracts": "4.9.3",
-    "hardhat": "2.17.4"
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "hardhat": "2.22.2"
   }
 }
