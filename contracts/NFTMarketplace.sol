@@ -1,12 +1,10 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.8.19;
+pragma solidity 0.8.24;
 
-import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 contract NFTMarketplace is ERC721URIStorage {
-    using Counters for Counters.Counter;
-    Counters.Counter private _nftIds;
+    uint256 private _nftIds;
     address payable contractOwner;
     uint256 public listingPrice = 10000000 wei;
 
@@ -31,8 +29,8 @@ contract NFTMarketplace is ERC721URIStorage {
     }
 
     function mintNFT(string memory tokenURI, uint256 price) public payable {
-        _nftIds.increment();
-        uint256 newNftId = _nftIds.current();
+        _nftIds++;
+        uint256 newNftId = _nftIds;
 
         _safeMint(msg.sender, newNftId);
         _setTokenURI(newNftId, tokenURI);
